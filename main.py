@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Form, File, UploadFile
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
+#from fastapi.staticfiles import StaticFiles
 from typing import Optional
 import docx2txt
 import PyPDF2
@@ -9,7 +9,7 @@ import PyPDF2
 app = FastAPI()
 
 # Enable access to static frontend
-app.mount("/static", StaticFiles(directory="static"), name="static")
+#app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Allow frontend (JS) to talk to backend
 app.add_middleware(
